@@ -30,16 +30,19 @@ const mostrarResultado = false
       <div>
         <div class="row">
           <label for="preco">preço:</label>
-
-          <input type="text" />
+          <input type="text" v-model="produto.preco"/>
         </div>
       </div>
       <div>
         <div class="row">
           <label for="quantidade = ">quantidade:</label>
 
-          <input type="text" />
+          <input type="text" v-model="produto.quantidade"/>
         
+        </div>
+        <div class="row">
+          <label for="categoria">categoria</label>
+          <input type="text" v-model="produto.categorias">
         </div>
         <button @click="mostrarResultado = !mostrarResultado">mostra</button>
       </div>
@@ -86,5 +89,9 @@ const mostrarResultado = false
   min-height: 70vh;
   border-radius: 20px;
   padding: 20px;
+}
+
+.row{
+  margin: 5px;
 }
 </style>
