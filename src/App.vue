@@ -5,16 +5,15 @@ const titulo = ref('ola seus putos')
 
 const produto = reactive({
   nome: '',
-  preco: 0,
-  quantidade: 0,
+  email: '',
+  senha: '',
   categorias: []
 })
 const mostrarResultado = false
 </script>
 
 <template>
-  <div class="putos">
-    <h1>{{ titulo }}</h1>
+  <div class="putos"> /h1>
   </div>
   <div class="container">
     <div class="forms">
@@ -23,38 +22,33 @@ const mostrarResultado = false
       <div>
         <div class="row">
           <label for="nome">nome:</label>
-
           <input type="text" v-model="produto.nome" />
-        </div>
-      </div>
-      <div>
-        <div class="row">
-          <label for="preco">preço:</label>
-          <input type="text" v-model="produto.preco"/>
-        </div>
-      </div>
-      <div>
-        <div class="row">
-          <label for="quantidade = ">quantidade:</label>
 
-          <input type="text" v-model="produto.quantidade"/>
+          <label for="email">email:</label>
+          <input type="text" v-model="produto.email">
+
+          <label for="senha">senha:</label>
+          <input type="password" v-model="produto.senha">
+
+          <label for="confirma">confirmação de senha:</label>
+          <input type="password" v-model="produto.confirma">
+
+          <label for="data">data de nacimento:</label>
+          <input type="date" v-model="produto.data">
+              
+          <label for="cidade">cidade:</label>
         
         </div>
-        <div class="row">
-          <label for="categoria">categoria</label>
-          <input type="text" v-model="produto.categorias">
-        </div>
-        <button @click="mostrarResultado = !mostrarResultado">mostra</button>
       </div>
     </div>
 
     <div class="resultado">
       <h2>dados do produto</h2>
       <p>nome: {{ produto.nome }}</p>
-      <p>preço:{{ produto.preco }}</p>
-      <p>quantidade:{{ produto.quantidade }}</p>
-      <p>categorias:{{ produto.categorias }}</p>
-      <p>{{ mostrarResultado }}</p>
+      <p>email:{{ produto.email }}</p>
+      <p>senha:{{ produto.senha }}</p>
+      <p>confirmação da senha:{{ produto.confirma }} </p>
+      <p>data de nacimento:{{ produto.data }}</p>
     </div>
   </div>
 </template>
@@ -66,6 +60,7 @@ const mostrarResultado = false
   background-color: white;
   color: black;
 }
+
 .container {
   display: flex;
   gap: 2rem;
@@ -91,7 +86,7 @@ const mostrarResultado = false
   padding: 20px;
 }
 
-.row{
+.row {
   margin: 5px;
 }
 </style>
