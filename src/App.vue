@@ -9,6 +9,9 @@ const produto = reactive({
   senha: '',
   categorias: []
 })
+
+   
+
 const mostrarResultado = false
 </script>
 
@@ -25,7 +28,7 @@ const mostrarResultado = false
           <input type="text" v-model="produto.nome" />
 
           <label for="email">email:</label>
-          <input type="text" v-model="produto.email">
+          <input type="email" v-model="produto.email">
 
           <label for="senha">senha:</label>
           <input type="password" v-model="produto.senha">
@@ -37,6 +40,10 @@ const mostrarResultado = false
           <input type="date" v-model="produto.data">
               
           <label for="cidade">cidade:</label>
+          <input type="text" v-model="produto.cidade">
+        
+          <label for="estado">estado:</label>
+          <input type="select" >
         
         </div>
       </div>
@@ -49,6 +56,7 @@ const mostrarResultado = false
       <p>senha:{{ produto.senha }}</p>
       <p>confirmação da senha:{{ produto.confirma }} </p>
       <p>data de nacimento:{{ produto.data }}</p>
+      <p>cidade:{{produto.cidade}}</p>
     </div>
   </div>
 </template>
